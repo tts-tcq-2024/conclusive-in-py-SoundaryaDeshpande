@@ -38,7 +38,6 @@ This section is about your regular work / project, not about the code in this re
 
 Think about guiding refactoring-work in your regular/project teams. Think of the day-to-day work done in your team, and improving the quality of code.
 
-You have seen a few workflows in this repository. They are quality-gates to prevent duplication, control complexity and prove functionality. Do you think some of them have potential to guide code-improvements in your team? yes 
+You have seen a few workflows in this repository. They are quality-gates to prevent duplication, control complexity and prove functionality. Do you think some of them have potential to guide code-improvements in your team?**yes yes/no** 
 
-During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!)
-The clean code so far done is very helpful, I will have to still work on complexity reduction part so that my code will become still more stronger and clean. Also it will be useful for the client to easily get through it. Importantly I have gained more in this clean code practice like how to write pure functions, Modularity and refactor the code. Hence its very useful for my upcoming projects to implement the taught modules.I will keep implementing the modules into my project. Also I will keep the practice ongoing about the clean code in my regular work. Thank you !! 
+During the next four weeks, what improvement do you plan in your code-quality practice? (in your regular work, not in this repository!)**I will keep practicing the clean code that will help in implementing in my project. So that it reduces the complexity,takes care of modularity and identifying the code that can be tested and many more. Thank you for the practice here**
