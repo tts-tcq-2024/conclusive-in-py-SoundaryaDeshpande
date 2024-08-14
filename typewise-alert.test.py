@@ -1,11 +1,22 @@
+
 import unittest
-import typewise_alert
+from typewise_alert import classify_temperature_breach
 
+class TestTemperatureBreach(unittest.TestCase):
+    def test_passive_cooling(self):
+        self.assertEqual(classify_temperature_breach('PASSIVE_COOLING', -1), 'TOO_LOW')
+        self.assertEqual(classify_temperature_breach('PASSIVE_COOLING', 36), 'TOO_HIGH')
+        self.assertEqual(classify_temperature_breach('PASSIVE_COOLING', 20), 'NORMAL')
 
-class TypewiseTest(unittest.TestCase):
-  def test_infers_breach_as_per_limits(self):
-    self.assertTrue(typewise_alert.infer_breach(20, 50, 100) == 'TOO_LOW')
+    def test_high_active_cooling(self):
+        self.assertEqual(classify_temperature_breach('HI_ACTIVE_COOLING', -1), 'TOO_LOW')
+        self.assertEqual(classify_temperature_breach('HI_ACTIVE_COOLING', 46), 'TOO_HIGH')
+        self.assertEqual(classify_temperature_breach('HI_ACTIVE_COOLING', 25), 'NORMAL')
 
+    def test_medium_active_cooling(self):
+        self.assertEqual(classify_temperature_breach('MED_ACTIVE_COOLING', -1), 'TOO_LOW')
+        self.assertEqual(classify_temperature_breach('MED_ACTIVE_COOLING', 41), 'TOO_HIGH')
+        self.assertEqual(classify_temperature_breach('MED_ACTIVE_COOLING', 30), 'NORMAL')
 
 if __name__ == '__main__':
-  unittest.main()
+    unittest.main()
